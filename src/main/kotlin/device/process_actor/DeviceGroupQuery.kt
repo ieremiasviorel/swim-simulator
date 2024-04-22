@@ -42,7 +42,7 @@ class DeviceGroupQuery private constructor(
         val temperatureReading = if (request.value != null) {
             TemperatureRead(request.value)
         } else {
-            TemperatureNotAvailable()
+            TemperatureNotAvailable.INSTANCE
         }
         repliesSoFar[request.deviceId] = temperatureReading
         stillWaiting.remove(request.deviceId)
@@ -51,7 +51,7 @@ class DeviceGroupQuery private constructor(
 
     private fun onTerminateDevice(request: TerminateDeviceRequest): Behavior<Command> {
         if (stillWaiting.contains(request.deviceId)) {
-            repliesSoFar[request.deviceId] = DeviceNotAvailable()
+            repliesSoFar[request.deviceId] = DeviceNotAvailable.INSTANCE
             stillWaiting.remove(request.deviceId)
         }
         return respondWhenAllCollected()
@@ -59,7 +59,7 @@ class DeviceGroupQuery private constructor(
 
     private fun onReadTemperatureTimeout(): Behavior<Command> {
         for (deviceId in stillWaiting) {
-            repliesSoFar[deviceId] = DeviceTimedOut()
+            repliesSoFar[deviceId] = DeviceTimedOut.INSTANCE
         }
         stillWaiting.clear()
         return respondWhenAllCollected()

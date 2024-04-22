@@ -1,6 +1,7 @@
 package device.process_actor
 
 import akka.actor.testkit.typed.javadsl.TestKitJunitResource
+import akka.actor.typed.ActorRef
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import device.data.DeviceNotAvailable
@@ -26,7 +27,7 @@ class DeviceGroupQueryTest {
             DeviceGroupQuery.create(
                 1L,
                 "group",
-                readGroupTemperatureProbe.ref,
+                readGroupTemperatureProbe.ref as ActorRef<Command>,
                 mapOf("device1" to device1.ref, "device2" to device2.ref),
                 Duration.ofSeconds(3),
             )
@@ -58,7 +59,7 @@ class DeviceGroupQueryTest {
             DeviceGroupQuery.create(
                 1L,
                 "group",
-                readGroupTemperatureProbe.ref,
+                readGroupTemperatureProbe.ref as ActorRef<Command>,
                 mapOf("device1" to device1.ref, "device2" to device2.ref),
                 Duration.ofSeconds(3),
             )
@@ -90,7 +91,7 @@ class DeviceGroupQueryTest {
             DeviceGroupQuery.create(
                 1L,
                 "group",
-                readGroupTemperatureProbe.ref,
+                readGroupTemperatureProbe.ref as ActorRef<Command>,
                 mapOf("device1" to device1.ref, "device2" to device2.ref),
                 Duration.ofSeconds(3),
             )
@@ -122,7 +123,7 @@ class DeviceGroupQueryTest {
             DeviceGroupQuery.create(
                 1L,
                 "group",
-                readGroupTemperatureProbe.ref,
+                readGroupTemperatureProbe.ref as ActorRef<Command>,
                 mapOf("device1" to device1.ref, "device2" to device2.ref),
                 Duration.ofSeconds(3),
             )
@@ -155,7 +156,7 @@ class DeviceGroupQueryTest {
             DeviceGroupQuery.create(
                 1L,
                 "group",
-                readGroupTemperatureProbe.ref,
+                readGroupTemperatureProbe.ref as ActorRef<Command>,
                 mapOf("device1" to device1.ref, "device2" to device2.ref),
                 Duration.ofSeconds(2),
             )

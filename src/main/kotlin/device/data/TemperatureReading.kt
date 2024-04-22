@@ -4,8 +4,14 @@ interface TemperatureReading
 
 data class TemperatureRead(val value: Double) : TemperatureReading
 
-class TemperatureNotAvailable : TemperatureReading
+enum class TemperatureNotAvailable : TemperatureReading {
+    INSTANCE
+}
 
-class DeviceNotAvailable : TemperatureReading
+enum class DeviceNotAvailable : TemperatureReading {
+    INSTANCE
+}
 
-class DeviceTimedOut : TemperatureReading
+enum class DeviceTimedOut : TemperatureReading {
+    INSTANCE
+}

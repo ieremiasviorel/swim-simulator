@@ -23,7 +23,7 @@ dependencies {
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'junit:junit:4.13.1'
-    testImplementation 'com.typesafe.akka:akka-actor-testkit-typed_2.13:2.8.1'
+    testImplementation 'com.typesafe.akka:akka-actor-testkit-typed_2.13:2.8.5'
 }
 
 tasks.withType(KotlinCompile).configureEach {

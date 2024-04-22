@@ -1,13 +1,13 @@
 package device.actor
 
 import akka.actor.testkit.typed.javadsl.TestKitJunitResource
-import device.actor.DeviceGroup
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertNotEquals
-import org.junit.jupiter.api.Test
+import akka.actor.typed.ActorRef
 import device.data.TemperatureNotAvailable
 import device.data.TemperatureRead
 import device.message.*
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNotEquals
+import org.junit.jupiter.api.Test
 import java.util.stream.Collectors
 import java.util.stream.Stream
 
@@ -21,10 +21,12 @@ class DeviceGroupTest {
         val deviceGroupActor = testKit.spawn(DeviceGroup.create("group"))
 
         // when
-        val registerDeviceRequest1 = RegisterDeviceRequest("group", "device1", registerDeviceProbe.ref)
+        val registerDeviceRequest1 =
+            RegisterDeviceRequest("group", "device1", registerDeviceProbe.ref as ActorRef<Command>)
         deviceGroupActor.tell(registerDeviceRequest1)
         val registerDeviceResponse1 = registerDeviceProbe.receiveMessage()
-        val registerDeviceRequest2 = RegisterDeviceRequest("group", "device2", registerDeviceProbe.ref)
+        val registerDeviceRequest2 =
+            RegisterDeviceRequest("group", "device2", registerDeviceProbe.ref as ActorRef<Command>)
         deviceGroupActor.tell(registerDeviceRequest2)
         val registerDeviceResponse2 = registerDeviceProbe.receiveMessage()
         // then
@@ -52,10 +54,12 @@ class DeviceGroupTest {
         val deviceGroupActor = testKit.spawn(DeviceGroup.create("group"))
 
         // when
-        val registerDeviceRequest1 = RegisterDeviceRequest("group", "device", registerDeviceProbe.ref)
+        val registerDeviceRequest1 =
+            RegisterDeviceRequest("group", "device", registerDeviceProbe.ref as ActorRef<Command>)
         deviceGroupActor.tell(registerDeviceRequest1)
         val registerDeviceResponse1 = registerDeviceProbe.receiveMessage()
-        val registerDeviceRequest2 = RegisterDeviceRequest("group", "device", registerDeviceProbe.ref)
+        val registerDeviceRequest2 =
+            RegisterDeviceRequest("group", "device", registerDeviceProbe.ref as ActorRef<Command>)
         deviceGroupActor.tell(registerDeviceRequest2)
         val registerDeviceResponse2 = registerDeviceProbe.receiveMessage()
 
@@ -70,10 +74,12 @@ class DeviceGroupTest {
         val listDevicesProbe = testKit.createTestProbe(ListDevicesResponse::class.java)
         val deviceGroupActor = testKit.spawn(DeviceGroup.create("group"))
 
-        val registerDeviceRequest1 = RegisterDeviceRequest("group", "device1", registerDeviceProbe.ref)
+        val registerDeviceRequest1 =
+            RegisterDeviceRequest("group", "device1", registerDeviceProbe.ref as ActorRef<Command>)
         deviceGroupActor.tell(registerDeviceRequest1)
         registerDeviceProbe.receiveMessage()
-        val registerDeviceRequest2 = RegisterDeviceRequest("group", "device2", registerDeviceProbe.ref)
+        val registerDeviceRequest2 =
+            RegisterDeviceRequest("group", "device2", registerDeviceProbe.ref as ActorRef<Command>)
         deviceGroupActor.tell(registerDeviceRequest2)
         registerDeviceProbe.receiveMessage()
 
@@ -94,10 +100,12 @@ class DeviceGroupTest {
         val listDevicesProbe = testKit.createTestProbe(ListDevicesResponse::class.java)
         val deviceGroupActor = testKit.spawn(DeviceGroup.create("group"))
 
-        val registerDeviceRequest1 = RegisterDeviceRequest("group", "device1", registerDeviceProbe.ref)
+        val registerDeviceRequest1 =
+            RegisterDeviceRequest("group", "device1", registerDeviceProbe.ref as ActorRef<Command>)
         deviceGroupActor.tell(registerDeviceRequest1)
         val registerDeviceResponse1 = registerDeviceProbe.receiveMessage()
-        val registerDeviceRequest2 = RegisterDeviceRequest("group", "device2", registerDeviceProbe.ref)
+        val registerDeviceRequest2 =
+            RegisterDeviceRequest("group", "device2", registerDeviceProbe.ref as ActorRef<Command>)
         deviceGroupActor.tell(registerDeviceRequest2)
         registerDeviceProbe.receiveMessage()
 
@@ -140,13 +148,16 @@ class DeviceGroupTest {
 
         val deviceGroupActor = testKit.spawn(DeviceGroup.create("group"))
 
-        val registerDeviceRequest1 = RegisterDeviceRequest("group", "device1", registerDeviceProbe.ref)
+        val registerDeviceRequest1 =
+            RegisterDeviceRequest("group", "device1", registerDeviceProbe.ref as ActorRef<Command>)
         deviceGroupActor.tell(registerDeviceRequest1)
         val deviceActor1 = registerDeviceProbe.receiveMessage().device
-        val registerDeviceRequest2 = RegisterDeviceRequest("group", "device2", registerDeviceProbe.ref)
+        val registerDeviceRequest2 =
+            RegisterDeviceRequest("group", "device2", registerDeviceProbe.ref as ActorRef<Command>)
         deviceGroupActor.tell(registerDeviceRequest2)
         val deviceActor2 = registerDeviceProbe.receiveMessage().device
-        val registerDeviceRequest3 = RegisterDeviceRequest("group", "device3", registerDeviceProbe.ref)
+        val registerDeviceRequest3 =
+            RegisterDeviceRequest("group", "device3", registerDeviceProbe.ref as ActorRef<Command>)
         deviceGroupActor.tell(registerDeviceRequest3)
 
         val recordTemperatureRequest1 = RecordTemperatureRequest(0L, 1.0, recordTemperatureProbe.ref)
@@ -161,7 +172,7 @@ class DeviceGroupTest {
 
         // when
         val readGroupTemperatureRequest = ReadGroupTemperatureRequest(
-            0L, "group", readGroupTemperatureProbe.ref
+            0L, "group", readGroupTemperatureProbe.ref as ActorRef<Command>
         )
         deviceGroupActor.tell(readGroupTemperatureRequest)
         val readGroupTemperatureResponse = readGroupTemperatureProbe.receiveMessage()
