@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="85ae19d5-c13c-4fa6-b3af-c2538ff27692" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/device/data/TemperatureReading.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/device/data/TemperatureReading.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/device/process_actor/DeviceGroupQuery.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/device/process_actor/DeviceGroupQuery.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/device/actor/DeviceGroupTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/device/actor/DeviceGroupTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/device/process_actor/DeviceGroupQueryTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/device/process_actor/DeviceGroupQueryTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +41,6 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="swim-simulator" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -85,49 +75,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build swim-simulator.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeviceGroupTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GreeterTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'swim-simulator.test'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.swim-simulator [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.swim-simulator [test].executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.SwimSimulatorApplicationKt.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;D:/IV/Documente/Master/An 2/Sem. II/Disertatie/swim-simulator/src/test/kotlin&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IV/Documente/Master/An 2/Sem. II/Disertatie/swim-simulator&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;3ad2223f322c4654a1f69ea5eb4a7678&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build swim-simulator.executor": "Run",
+    "Gradle.DeviceGroupTest.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.GreeterTest.executor": "Run",
+    "Gradle.Tests in 'swim-simulator.test'.executor": "Run",
+    "Gradle.swim-simulator [build].executor": "Run",
+    "Gradle.swim-simulator [test].executor": "Run",
+    "Kotlin.SwimSimulatorApplicationKt.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "D:/IV/Documente/Master/An 2/Sem. II/Disertatie/swim-simulator/src/test/kotlin",
+    "last_opened_file_path": "D:/IV/Documente/Master/An 2/Sem. II/Disertatie/swim-simulator",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
+    "spring.configuration.checksum": "3ad2223f322c4654a1f69ea5eb4a7678",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;kotlin-gradle-user-dirs&quot;: [
-      &quot;C:\\Users\\Ierem\\.gradle&quot;
+  "keyToStringList": {
+    "kotlin-gradle-user-dirs": [
+      "C:\\Users\\vieremias\\.gradle"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IV\Documente\Master\An 2\Sem. II\Disertatie\swim-simulator\src\main\kotlin\device\data" />
@@ -154,7 +144,7 @@
       <recent name="swim_simulator.message" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.swim-simulator [test]">
+  <component name="RunManager" selected="Gradle.swim-simulator [build]">
     <configuration name="DeviceGroupTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -254,10 +244,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SwimSimulatorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="swim-simulator.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="swim_simulator.SwimSimulatorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.GreeterTest" />
+      <item itemvalue="Gradle.swim-simulator [build]" />
+      <item itemvalue="Gradle.swim-simulator [test]" />
+      <item itemvalue="Gradle.DeviceGroupTest" />
+      <item itemvalue="Kotlin.SwimSimulatorApplicationKt" />
+      <item itemvalue="Spring Boot.SwimSimulatorApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.swim-simulator [test]" />
         <item itemvalue="Gradle.swim-simulator [build]" />
+        <item itemvalue="Gradle.swim-simulator [test]" />
         <item itemvalue="Gradle.GreeterTest" />
         <item itemvalue="Kotlin.SwimSimulatorApplicationKt" />
         <item itemvalue="Gradle.DeviceGroupTest" />
